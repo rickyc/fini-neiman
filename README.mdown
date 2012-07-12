@@ -1,1 +1,6 @@
+Photo Uploader
+===
 
+- allow users to drag and drop images to the homepage
+- upon submit the user will be given a private link to share
+- the shared link will be a gallery of the images the user uploaded
