@@ -8,9 +8,10 @@
     "coffee-script": ">=1.3.x"
   }, 
   "engines": {
-    "node": "0.8.x"
+    "node": "0.8.x",
+    "npm": "1.1.x"
   },
   "scripts": {
-    "start": "coffee server"
+    "start": "coffee server.coffee"
   }
 }
