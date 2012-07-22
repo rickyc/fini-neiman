@@ -1,2 +1,8 @@
 h1= title
-p Welcome to #{title}
+p Currently two or more files are required for this to work properly :(
+
+form(method="post", name="f", action="/multiple-files", enctype="multipart/form-data")
+  input(name="filesToUpload[]", id="filesToUpload", type="file", multiple="")
+  div.actions
+    button.btn.primary(type="submit") Upload
+    button.btn.cancel(type="button") Cancel
