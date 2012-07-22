@@ -8,7 +8,10 @@ config = require('./config/settings')
 
 # Mongoose
 mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/my_database')
+if process.env.NODE_ENV == 'production'
+  mongoose.connect(process.env.MONGOHQ_URL)
+else
+  mongoose.connect('mongodb://localhost/my_database')
 
 Album = require('./models/album')
 Photo = require('./models/photo')
