@@ -2,7 +2,6 @@
 express = require('express')
 connectStreamS3 = require('connect-stream-s3')
 amazon = require('awssum').load('amazon/amazon')
-routes = require('./routes')
 
 config = require('./config/settings')
 
@@ -70,7 +69,7 @@ app.configure 'production', ->
   app.use express.errorHandler()
 
 # Routes
-app.get '/', routes.index
+app.get '/', require('./routes').index
 
 app.post '/multiple-files', randomiseS3ObjectNames, s3StreamMiddleware, require('./routes/upload').upload
 
